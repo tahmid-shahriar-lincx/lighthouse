@@ -8,7 +8,7 @@ let browser;
 async function getBrowserInstance() {
   if (!browser) {
     const puppeteer = await import("puppeteer");
-    browser = await puppeteer.launch({ headless: true, args: ['--remote-debugging-port=9222'] });
+    browser = await puppeteer.launch({ headless: 'shell', args: ['--remote-debugging-port=9222'] });
   }
   return browser;
 }
